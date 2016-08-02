@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>array</title>
+		<meta name="author" content="Administrator" />
+		<script  src="../commons/commons.js"></script>
+		<!-- Date: 2015-11-10 -->
+		<script type="text/javascript" charset="UTF-8">
+			/*
+			 * js数组排序   根据函数返回的结果 来判断是正序 还是反序
+			 * sort 正序排序    字符串的方式排序
+			 * reverse 倒序排序      按照集合的位置进行倒序排序
+			 */
+			var str=[1,2,3,5,10,22,87,20,10] ;
+			//str.sort(); //正常字符串的方式排序
+			
+			//str.reverse();  //按照集合的位置进行倒序排序
+			//str.sort(arryaSortAsc); //sort升序
+			str.sort(arryaSortDesc); //sort降序
+			alert(str);
+			
+			
+			/*
+			 * push，unshift 和 pop,shift 方法
+			 */
+			var str= [];
+			var ss = str.push(1,2,new Date());// push 给数组追加元素，返回值是新数组的长度
+			str.pop(); //pop从数组尾部去掉一个元素，返回值为移除的元素
+			str.shift(); //shift 从头部去掉一个元素，返回值为移除的元素
+			str.unshift(19,21,true); //unshift 从头部插入多个元素，返回为新数组的长度
+			//str.sort(arryaSortAsc);
+			//alert(str);
+			/*
+			 * splice,slice 方法（截取的方法）
+			 */
+			var arr = [1,2,3,4,5];
+			arr.splice(1,2,3,3);  //第一个参数是起始位置，第二个参数为截取的长度，第三个参数及以后的参数为新追加的元素
+			var ssa = arr.slice(2,3);   //不操作数组本身,返回截取的内容
+			//alert(arr);
+			/*
+			 * 操作数组的方法： concat,join 
+			 */
+			var arr1=[1,2,3,4];
+			var arr2=[7,9,true];
+			
+			var ssd = arr1.concat(arr2); //把两个数组合并在一个数组里,不操作数组本身
+			//alert(ssd);
+			var  sts = arr1.join("-");  //在每个元素中间添加制表符，不操作数组本身
+			//alert(sts);
+			/**forEach循环数组里的每个元素*/
+			arr1.forEach(function(item,index,array){
+				//alert(item +':'+ index);
+			});
+			/**map可以对数组的每个值进行函数运算*/
+			arr1.map(function(item,index,array){
+				//alert(item*2);
+			});
+			
+			
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>
+
